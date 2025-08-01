@@ -1,7 +1,7 @@
 # Sales Data Analysis with MySQL and Power BI
 
 ## 1. Project Overview
-This project demonstrates a full data cleaning, normalixation and visualization process using:
+This project demonstrates a full data cleaning, normalization and visualization process using:
 - *MySQL* for data storage, cleaning, and normalization.
 - *Power BI* for building interactive dashboards and insights.
 
