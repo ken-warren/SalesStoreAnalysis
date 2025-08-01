@@ -1,4 +1,4 @@
-# Sales Data Analysis with MySQL and Power BI
+# A Deep Dive Into W3Store Sales
 
 ## 1. Project Overview
 This project demonstrates a full data cleaning, normalization and visualization process using:
