@@ -1,0 +1,2 @@
+CREATE DATABASE W3Store;
+USE W3Store;
