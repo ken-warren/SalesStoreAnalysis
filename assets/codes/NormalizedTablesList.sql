@@ -1,0 +1,8 @@
+CUSTOMERS(CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+EMPLOYEES(EmployeeID, FirstName, LastName, BirthDate, Notes)
+SUPPLIERS(SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country, Phone)
+SHIPPERS(ShipperID, ShipperName, Phone)
+CATEGORIES(CategoryID, CategoryName, Description)
+PRODUCTS(ProductID, ProductName, SupplierID, CategoryID, Unit, Price)
+ORDERS(OrderID, CustomerID, EmployeeID, ShipperID, OrderDate)
+ORDER_DETAILS(OrderDetailID, OrderID, ProductID, Quantity)
