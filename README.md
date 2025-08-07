@@ -1,19 +1,18 @@
 # A Deep Dive Into W3Store Sales
 
 ## 1. Project Overview
-This project demonstrates a full data cleaning, normalization and visualization process using:
-- *MySQL* for data storage, cleaning, and normalization.
-- *Power BI* for building interactive dashboards and insights.
-
-The dataset contains sales transactions with details about customers, products, suppliers, shippers, and employees.
+This project illustrates the full data pipeline from cleaning and normalization in MySQL to interactive visualization in Power BI. It focuses on transforming raw sales data from W3Stores, covering customers, products, suppliers, shippers, and employees, into structured, reliable insights. The result is a dynamic dashboard that enables clear analysis of sales performance and operational trends.
 
 ---
 
 ## 2. Objectives
-- Clean and normalize raw sales data into a relational database.
-- Create relationships between key entities (Customers, Products, Orders, etc.).
-- Analyze sales trends and product performance.
-- Build dashboards for management insights.
+This project aims to answer the following questions through data modeling and interactive dashboards:
+- How are total sales, quantity, and order value performing across different years, countries (cities), and suppliers?
+- Which products, categories, and shippers are contributing most to sales and volume?
+- What is the monthly trend and growth rate?
+- What is the geographical distribution of customers and sales, and how does it vary by region?
+- What are the suppliers' market share overally & by product category, and what is their contribution to overall performance?
+By using dynamic slicers (Year, Country, Supplier), the dashboards enable users to explore these questions in a flexible and insightful way.
 
 ---
 
