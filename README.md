@@ -7,7 +7,7 @@ This project illustrates the full data pipeline from cleaning and normalization 
 
 ## 2. Objectives
 This project aims to answer the following questions through data modeling and interactive dashboards:
-- How are total sales, quantity, and order value performing across different years, countries (cities), and suppliers?
+- How are total sales, quantity, and orders performing across different years, countries (cities), and suppliers?
 - Which products, categories, and shippers are contributing most to sales and volume?
 - What is the monthly trend and growth rate?
 - What is the geographical distribution of customers and sales, and how does it vary by region?
@@ -95,27 +95,30 @@ Relationships:
 Total Sales = SUMX(OrderDetails, OrderDetails[Quantity] * Products[Price])
 ```
 
-### 
 
-## 8. Dashboards
-### Overview Dashboard:
-<img width="1203" height="593" alt="W3Store Dashboard" src="https://github.com/user-attachments/assets/f3ed7576-1025-4aca-a74d-7ac86b408ea4" />
 
-### Other Visuals:
-- Total Sales by Country 
-<img width="1079" height="482" alt="Sales By Country" src="https://github.com/user-attachments/assets/adb8fd96-b289-442e-a456-2442ff93f3c8" />
+---
+ # 8. Results
+---
+1. How are total sales, quantity, and orders performing across different years, countries (cities), and suppliers?
+The Overview dashboard below shows the total sales (by value and quantity), number of orders, customers and Average Order Value (AOV) as the KPIs. The dynamic slicers allows viewing of the sales by time(YEAR), by demographic location(COUNTRY, CITY) and by Supplier (SUPPLIER).
+<img width="1366" height="768" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
 
-- Sales Trend Over Time 
-<img width="1222" height="573" alt="Sales Trend" src="https://github.com/user-attachments/assets/bff5a0c1-41df-4fd9-93a8-44706aa8ea1f" />
- 
-- Top Products by Revenue
-<img width="1220" height="574" alt="Top 5 Products" src="https://github.com/user-attachments/assets/ff2ab3c7-4826-4ffe-9a68-dcf64d118cbb" />
+3. Which products, categories, and shippers are contributing most to sales and volume?
+- Refering to the above image, Beverages Category contributes to most sales by value with Cote de Blaye, which is a product in this category having most sales by value as shown below.
+<img width="1203" height="560" alt="Category Sales" src="https://github.com/user-attachments/assets/8eb628f7-19f0-4211-908f-09bb4d1b8828" /> <img width="1221" height="565" alt="Top 5 Prods" src="https://github.com/user-attachments/assets/34295e32-59ff-47ca-a5da-2ca1aa17c096" />
 
-- Top Customers by Orders
-<img width="1070" height="565" alt="Top 5 Customers" src="https://github.com/user-attachments/assets/30f11386-741a-486f-9ef8-1ca240290638" />
+- By quantity, the diagrams below shop top 5 Products and Top selling categories:
+<img width="1219" height="566" alt="Quantity top 5" src="https://github.com/user-attachments/assets/c90cc999-a88b-47f1-aff4-3f560d6eb413" /> <img width="1219" height="565" alt="Quantity Category" src="https://github.com/user-attachments/assets/6841f1f0-116a-4592-8e88-103a9def0dc7" />
 
-- Category-wise Sales Performance 
- <img width="1068" height="572" alt="Pie Chart Products Category" src="https://github.com/user-attachments/assets/05da145d-36a0-492d-903c-5dd1d0515b4c" />
+- United Package contributes to most shipped sales by value (39.3%)
+<img width="1221" height="569" alt="Top Shipper Pie" src="https://github.com/user-attachments/assets/7c346d20-008f-43c8-b074-18ea9bc1a06d" />
+
+5. What is the monthly trend and growth rate?
+- The trend line below shows that there was a dip in overall sales in September 1996 (-14.5% MoM) and January 1997 (35.8% MoM) recorded the highest sales
+
+7. What is the geographical distribution of customers and sales, and how does it vary by region?
+8. What are the suppliers' market share overally & by product category, and what is their contribution to overall performance?
 
 
 Filters:
