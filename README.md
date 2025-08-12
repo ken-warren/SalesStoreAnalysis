@@ -161,7 +161,7 @@ DIVIDE(
 **_1. How are total sales, quantity, and orders performing across different years, countries (cities), and suppliers?_**
 - The Overview dashboard below shows the total sales (by value and quantity), number of orders, customers and Average Order Value (AOV) as the KPIs. The dynamic slicers allows viewing of the sales by time(YEAR), by demographic location(COUNTRY, CITY) and by Supplier (SUPPLIER).
 
-   <img width="300" height="150" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
+   <img width="550" height="250" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
 
 **_2. Which products, categories, and shippers are contributing most to sales and volume?_**
 - Refering to the above image, Beverages Category contributes to most sales by value with Cote de Blaye, which is a product in this category having most sales by value as shown below.
@@ -178,7 +178,7 @@ DIVIDE(
 
 - United Package contributes to most shipped sales by value (39.3%)
 
-   <img width="450" height="150" alt="Top Shippers Pie Chart" src="https://github.com/user-attachments/assets/7c346d20-008f-43c8-b074-18ea9bc1a06d" />
+   <img width="450" height="200" alt="Top Shippers Pie Chart" src="https://github.com/user-attachments/assets/7c346d20-008f-43c8-b074-18ea9bc1a06d" />
 
 
 **_3. What is the monthly trend and growth rate?_**
@@ -188,12 +188,12 @@ DIVIDE(
 
 - The table below shows Month-over-Month growth rate - February 1997 recorded a significant decline of **75.4%** in sales
 
-    <img width="250" height="100" alt="MoM" src="https://github.com/user-attachments/assets/57d21c8b-4baf-4f29-a161-013837f81b78" />
+    <img width="300" height="200" alt="MoM" src="https://github.com/user-attachments/assets/57d21c8b-4baf-4f29-a161-013837f81b78" />
 
 **_4. What is the geographical distribution of customers and sales, and how does it vary by region?_**_
 - The diagram below shows the geographical distribution of W3Store's top 5 Customers by value:
 
-   <img width="450" height="150" alt="Customers Distribution" src="https://github.com/user-attachments/assets/92544eba-a0fe-4742-a983-e7eab28d526d" />
+   <img width="550" height="250" alt="Customers Distribution" src="https://github.com/user-attachments/assets/92544eba-a0fe-4742-a983-e7eab28d526d" />
 
 - The following countries dominated sales by number of customers, orders placed and total sales (both by quantity & value):
 
@@ -203,13 +203,13 @@ DIVIDE(
 
 - The diagram below shows the overall Market share by Supplier:
 
-    <img width="450" height="150" alt="Supplier Market Share" src="https://github.com/user-attachments/assets/78b98d24-dabf-4e7c-b811-7bcbc415ed3b" />
+    <img width="600" height="300" alt="Supplier Market Share" src="https://github.com/user-attachments/assets/78b98d24-dabf-4e7c-b811-7bcbc415ed3b" />
 
 - Overally, **_Aux Joyeux ecclesiastiques_** (Beverage Supplier) dominated the market share (37% of overall sales by value) in November 1996 to January 1997 (32%) but had no sales in February 1997. This formed an opportunity for **_Plutzer_** (Confections Supplier) to dominate the market with 25% Market Share (an increase of 18% compared to previous month).
 
 - By descending order of sales value by Category, the following table shows the top Suppliers by Market Share in the current month (February 1997):
 
-  <img width="450" height="100" alt="Market Share by Category" src="https://github.com/user-attachments/assets/b7565ca9-40a6-404d-87ef-4852a90a759d" />
+  <img width="450" height="200" alt="Market Share by Category" src="https://github.com/user-attachments/assets/b7565ca9-40a6-404d-87ef-4852a90a759d" />
 
 ## Conclusion
 The W3Store sales analysis successfully demonstrates the integration of SQL-based ETL processes with Power BI visualization to deliver actionable business intelligence. The data reveals clear patterns in sales trends, supplier dominance, and regional performance. The dashboards provide a dynamic, user-friendly interface for decision-makers to explore KPIs, monitor growth, and evaluate supplier performance with precision.
