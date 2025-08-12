@@ -15,7 +15,6 @@
 ## Project Overview
 This project illustrates the full data pipeline from cleaning and normalization in MySQL to interactive visualization in Power BI. It focuses on transforming raw sales data from W3Stores, covering customers, products, suppliers, shippers, and employees, into structured, reliable insights. The result is a dynamic dashboard that enables clear analysis of sales performance and operational trends.
 
----
 
 ## Objectives
 This project aims to answer the following questions through data modeling and interactive dashboards:
@@ -26,14 +25,12 @@ This project aims to answer the following questions through data modeling and in
 - What are the suppliers' market share overally & by product category, and what is their contribution to overall performance?
 By using dynamic slicers (Year, Country, Supplier), the dashboards enable users to explore these questions in a flexible and insightful way.
 
----
 
 ## Tools
 - *MySQL 8.0* – Database management and transformations.
 - *Power BI Desktop* – Visualization and data modeling.
 - *VS Code* – SQL scripting and repository management.
 
----
 
 ## Data Source & Structure
 The raw data contains:
@@ -44,7 +41,6 @@ The raw data contains:
 - *Employee details* (names, birth dates, notes)
 - *Shipper details* (names, contact)
 
----
 
 ## SQL Data Analysis
 
@@ -103,31 +99,50 @@ Relationships:
 - Products[ProductID] → OrderDetails[ProductID]
 - Suppliers[SupplierID] → Products[SupplierID]
  
-   <img width="250" height="150" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
+   <img width="600" height="450" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
 
 ### Measures (DAX)
 
 1. Total Sales
 ```dax
-Total Sales = SUMX(OrderDetails, OrderDetails[Quantity] * Products[Price])
+Total Sales = SUMX(Order Details, Order Details[Quantity] * Products[Price])
 ```
 2. Total Quantity
 ```dax
-
+Total Quantity = SUMX(Order Details, Order Details[Quantity])
 ```
    
 3. Average Order Quantity
 ```dax
-
+AOV = 
+DIVIDE(
+    [Total Sales Value],
+    DISTINCTCOUNT('Raw Data'[OrderID])
+)
 ```
 4. Month-over-Month Percentage Growth
 ```dax
-
+MoM% = 
+IF (
+    ISFILTERED(Orders[OrderDate]),
+    ERROR("Time intelligence measures must use a full date table."),
+    VAR __PREV_MONTH = CALCULATE(
+        [Selected Metric Value],
+        DATEADD(Orders[OrderDate].[Date], -1, MONTH)
+    )
+    RETURN DIVIDE([Selected Metric Value] - __PREV_MONTH, __PREV_MONTH)
 ```
 
 5. Market Share
 ```dax
-
+Supplier Market Share % = 
+DIVIDE(
+    [Selected Metric Value],
+    CALCULATE(
+        [Selected Metric Value],
+        ALL('Supplier')
+    )
+)
 ```
 
 
@@ -135,7 +150,7 @@ Total Sales = SUMX(OrderDetails, OrderDetails[Quantity] * Products[Price])
 ## Findings
 ---
 **_1. How are total sales, quantity, and orders performing across different years, countries (cities), and suppliers?_**
-The Overview dashboard below shows the total sales (by value and quantity), number of orders, customers and Average Order Value (AOV) as the KPIs. The dynamic slicers allows viewing of the sales by time(YEAR), by demographic location(COUNTRY, CITY) and by Supplier (SUPPLIER).
+- The Overview dashboard below shows the total sales (by value and quantity), number of orders, customers and Average Order Value (AOV) as the KPIs. The dynamic slicers allows viewing of the sales by time(YEAR), by demographic location(COUNTRY, CITY) and by Supplier (SUPPLIER).
 
    <img width="600" height="450" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
 
@@ -164,15 +179,28 @@ The Overview dashboard below shows the total sales (by value and quantity), numb
 
 
 **_4. What is the geographical distribution of customers and sales, and how does it vary by region?_**_
-The diagram below shows the geographical distribution of W3Store's top 5 Customers by value:
+- The diagram below shows the geographical distribution of W3Store's top 5 Customers by value:
 
-<img width="600" height="450" alt="Customers Distribution" src="https://github.com/user-attachments/assets/92544eba-a0fe-4742-a983-e7eab28d526d" />
+   <img width="600" height="450" alt="Customers Distribution" src="https://github.com/user-attachments/assets/92544eba-a0fe-4742-a983-e7eab28d526d" />
 
-The following countries dominated sales by number of customers, orders placed and total sales (both by quantity & value):
+- The following countries dominated sales by number of customers, orders placed and total sales (both by quantity & value):
 
-<img width="500" height="250" alt="Metrics by Country" src="https://github.com/user-attachments/assets/2d5293a8-33e4-42b0-ac2d-c76e939b3c72" />
+   <img width="500" height="250" alt="Metrics by Country" src="https://github.com/user-attachments/assets/2d5293a8-33e4-42b0-ac2d-c76e939b3c72" />
 
 **_5. What are the suppliers' market share overally & by product category, and what is their contribution to overall performance?_**
+
+- The diagram below shows the overall Market share by Supplier:
+
+<img width="850" height="450" alt="Supplier Market Share" src="https://github.com/user-attachments/assets/78b98d24-dabf-4e7c-b811-7bcbc415ed3b" />
+
+- Overally, **_Aux Joyeux ecclesiastiques_** (Beverage Supplier) dominated the market share (37% of overall sales by value) in November 1996 to January 1997 (32%) but had no sales in February 1997. This formed an opportunity for **_Plutzer_** (Confections Supplier) to dominate the market with 25% Market Share (an increase of 18% compared to previous month).
+
+By descending order of sales value by Category, the following table shows the top Suppliers by Market Share in the current month (February 1997):
+
+
+<img width="600" height="250" alt="Market Share by Category" src="https://github.com/user-attachments/assets/b7565ca9-40a6-404d-87ef-4852a90a759d" />
+
+
 
 
 
