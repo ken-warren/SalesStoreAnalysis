@@ -2,15 +2,23 @@
 
 ## Table of Contents
 
-- [Project Overview](#project-overview)
-- [Objectives](#objectives)
-- [Tools](#Tools)
-- [Data Source & Structure](#data-source-&-structure)
-- [SQL Data Analysis](#sql-data-analysis)
-- [Power BI Analysis](#power-bi-analysis)
-- [Findings](#findings)
-- [Conclusion](#conclusion)
-- [Recommendations](#recommendations)
+- [Project Overview](#project-overview)  
+- [Objectives](#objectives)  
+- [Tools](#tools)  
+- [Data Source & Structure](#data-source--structure)  
+- [SQL Data Analysis](#sql-data-analysis)  
+- [ETL Pipeline](#etl-pipeline)  
+  - [Extraction](#extraction)  
+  - [Transformation](#transformation)  
+  - [Loading](#loading)  
+- [Database Schema](#database-schema)  
+- [Power BI Analysis](#power-bi-analysis)  
+  - [Modeling](#modeling)  
+  - [Measures (DAX)](#measures-dax)  
+- [Code Index](#code-index)  
+- [Findings](#findings)  
+- [Conclusion](#conclusion)  
+- [Recommendations](#recommendations) 
 
 ## Project Overview
 This project illustrates the full data pipeline from cleaning and normalization in MySQL to interactive visualization in Power BI. It focuses on transforming raw sales data from W3Stores, covering customers, products, suppliers, shippers, and employees, into structured, reliable insights. The result is a dynamic dashboard that enables clear analysis of sales performance and operational trends.
@@ -99,7 +107,7 @@ Relationships:
 - Products[ProductID] → OrderDetails[ProductID]
 - Suppliers[SupplierID] → Products[SupplierID]
  
-   <img width="600" height="450" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
+   <img width="850" height="400" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
 
 ### Measures (DAX)
 
@@ -177,6 +185,9 @@ DIVIDE(
 
    <img width="600" height="450" alt="Monthly Sales Trend" src="https://github.com/user-attachments/assets/5e838eed-6633-42ce-8364-e30f3aa550f2" />
 
+- The table below shows Month-over-Month growth rate - February 1997 recorded a significant decline of **75.4%** in sales
+
+<img width="250" height="200" alt="MoM" src="https://github.com/user-attachments/assets/57d21c8b-4baf-4f29-a161-013837f81b78" />
 
 **_4. What is the geographical distribution of customers and sales, and how does it vary by region?_**_
 - The diagram below shows the geographical distribution of W3Store's top 5 Customers by value:
@@ -197,12 +208,18 @@ DIVIDE(
 
 By descending order of sales value by Category, the following table shows the top Suppliers by Market Share in the current month (February 1997):
 
-
 <img width="600" height="250" alt="Market Share by Category" src="https://github.com/user-attachments/assets/b7565ca9-40a6-404d-87ef-4852a90a759d" />
 
+## Conclusion
+The W3Store sales analysis successfully demonstrates the integration of SQL-based ETL processes with Power BI visualization to deliver actionable business intelligence. The data reveals clear patterns in sales trends, supplier dominance, and regional performance. The dashboards provide a dynamic, user-friendly interface for decision-makers to explore KPIs, monitor growth, and evaluate supplier performance with precision.
 
+## Recommendations
+1. Supplier Performance Optimization – Engage with underperforming suppliers to understand challenges and replicate best practices from top performers.
+2. Product Portfolio Management – Focus marketing efforts on top-selling categories like Beverages while exploring strategies to boost sales in underperforming ones like Produce.
+3. Seasonal Trend Planning – Leverage monthly trend insights to plan promotional activities during historically low-performing months like February.
+Logistics Efficiency – Strengthen partnerships with top shippers to maintain delivery reliability and customer satisfaction.
+4. Data Quality Maintenance – Continue periodic data cleaning and schema normalization to ensure accurate, reliable reporting.
 
+## Reference
+You can access the raw data and codes used for this project [here](https://github.com/ken-warren/SalesStoreAnalysis/tree/main/assets)
 
-
-
- 
