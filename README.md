@@ -86,7 +86,7 @@ Relationships:
 - Products[ProductID] → OrderDetails[ProductID]
 - Suppliers[SupplierID] → Products[SupplierID]
  
-<img width="888" height="589" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
+<img width="250" height="150" alt="Relationships" src="https://github.com/user-attachments/assets/940fa512-1544-4228-8354-d5f9e1916152" />
 
 ## 7.2 Measures (DAX)
 
@@ -102,11 +102,11 @@ Total Sales = SUMX(OrderDetails, OrderDetails[Quantity] * Products[Price])
 ---
 1. How are total sales, quantity, and orders performing across different years, countries (cities), and suppliers?
 The Overview dashboard below shows the total sales (by value and quantity), number of orders, customers and Average Order Value (AOV) as the KPIs. The dynamic slicers allows viewing of the sales by time(YEAR), by demographic location(COUNTRY, CITY) and by Supplier (SUPPLIER).
-<img width="1366" height="768" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
+<img width="250" height="150" alt="Overview W3Store" src="https://github.com/user-attachments/assets/b78ae32e-0297-49a5-9ad1-84be712a0ce4" />
 
 3. Which products, categories, and shippers are contributing most to sales and volume?
 - Refering to the above image, Beverages Category contributes to most sales by value with Cote de Blaye, which is a product in this category having most sales by value as shown below.
-<img width="1203" height="560" alt="Category Sales" src="https://github.com/user-attachments/assets/8eb628f7-19f0-4211-908f-09bb4d1b8828" /> <img width="1221" height="565" alt="Top 5 Prods" src="https://github.com/user-attachments/assets/34295e32-59ff-47ca-a5da-2ca1aa17c096" />
+<img width="250" height="150" alt="Category Sales" src="https://github.com/user-attachments/assets/8eb628f7-19f0-4211-908f-09bb4d1b8828" /> <img width="1221" height="565" alt="Top 5 Prods" src="https://github.com/user-attachments/assets/34295e32-59ff-47ca-a5da-2ca1aa17c096" />
 
 - By quantity, the diagrams below shop top 5 Products and Top selling categories:
 <img width="1219" height="566" alt="Quantity top 5" src="https://github.com/user-attachments/assets/c90cc999-a88b-47f1-aff4-3f560d6eb413" /> <img width="1219" height="565" alt="Quantity Category" src="https://github.com/user-attachments/assets/6841f1f0-116a-4592-8e88-103a9def0dc7" />
