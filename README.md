@@ -215,11 +215,10 @@ DIVIDE(
 The W3Store sales analysis successfully demonstrates the integration of SQL-based ETL processes with Power BI visualization to deliver actionable business intelligence. The data reveals clear patterns in sales trends, supplier dominance, and regional performance. The dashboards provide a dynamic, user-friendly interface for decision-makers to explore KPIs, monitor growth, and evaluate supplier performance with precision.
 
 ## Recommendations
-1. Supplier Performance Optimization – Engage with underperforming suppliers to understand challenges and replicate best practices from top performers.
-2. Product Portfolio Management – Focus marketing efforts on top-selling categories like Beverages while exploring strategies to boost sales in underperforming ones like Produce.
-3. Seasonal Trend Planning – Leverage monthly trend insights to plan promotional activities during historically low-performing months like February.
-Logistics Efficiency – Strengthen partnerships with top shippers to maintain delivery reliability and customer satisfaction.
-4. Data Quality Maintenance – Continue periodic data cleaning and schema normalization to ensure accurate, reliable reporting.
+1. **Supplier Performance Optimization** – Engage with underperforming suppliers to understand challenges and replicate best practices from top performers.
+2. **Product Portfolio Management** – Focus marketing efforts on top-selling categories like Beverages while exploring strategies to boost sales in underperforming ones like Produce.
+3. **Seasonal Trend Planning** – Leverage monthly trend insights to plan promotional activities during historically low-performing months like February.
+4. **Data Quality Maintenance** – Continue periodic data cleaning and schema normalization to ensure accurate, reliable reporting.
 
 ## Reference
 You can access the raw data and codes used for this project [here](https://github.com/ken-warren/SalesStoreAnalysis/tree/main/assets)
